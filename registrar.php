@@ -1,0 +1,123 @@
+<?php 
+session_start();
+
+$sessData = !empty($_SESSION['sessData']) ? $_SESSION['sessData'] : '';
+
+if (!empty($sessData['status']['msg'])) {
+    $statusMsg = $sessData['status']['msg'];
+    $status = $sessData['status']['type'];
+    unset($_SESSION['sessData']['status']);
+}
+
+$postData = array();
+if (!empty($sessData['postData'])) {
+    $postData = $sessData['postData'];
+    unset($_SESSION['sessData']['postData']);
+}
+?>
+
+<?php if (!empty($statusMsg)) { ?>
+    <div class="status-msg <?php echo $status; ?>"><?php echo $statusMsg; ?></div>
+<?php } ?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REGISTRAR</title>
+    <link rel="stylesheet" type="text/css" href="css/validacion.css">
+</head>
+<body class="nose">
+<main>
+    <form action="userAccount.php" class="formulario" id="formulario" method="post">
+
+        <!-- Usuario -->
+        <div class="formulario_grupo" id="grupo_usuario">
+            <label for="usuario" class="formulario_label">Usuario</label>
+            <div class="formulario_grupo-input">
+                <input type="text" name="first_name" placeholder="katy123" class="formulario_input" 
+                id="usuario"
+                value="<?php echo !empty($postData['first_name']) ? $postData['first_name'] : ''; ?>" required>
+            </div>
+        </div>
+
+        <!-- Nombre -->
+        <div class="formulario_grupo" id="grupo_nombre">
+            <label for="nombre" class="formulario_label">Nombre</label>
+            <div class="formulario_grupo-input">
+                <input type="text" name="last_name" placeholder="Nombre" class="formulario_input" id="nombre" 
+                value="<?php echo !empty($postData['last_name']) ? $postData['last_name'] : ''; ?>" required>
+            </div>
+        </div>
+
+        <!-- Correo Electrónico -->
+        <div class="formulario_grupo" id="grupo_correo">
+            <label for="correo" class="formulario_label">Correo Electrónico</label>
+            <div class="formulario_grupo-input">
+                <input type="email" name="email" class="formulario_input" id="correo" placeholder="correo@gmail.com" 
+                value="<?php echo !empty($postData['email']) ? $postData['email'] : ''; ?>" required>
+            </div>
+        </div>
+
+        <!-- Teléfono -->
+        <div class="formulario_grupo" id="grupo_telefono">
+            <label for="telefono" class="formulario_label">Teléfono</label>
+            <div class="formulario_grupo-input">
+                <input type="text" name="phone" id="telefono" placeholder="55------" class="formulario_input" 
+                value="<?php echo !empty($postData['phone']) ? $postData['phone'] : ''; ?>" required>
+            </div>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="formulario_grupo" id="grupo_password">
+            <label for="password" class="formulario_label">Contraseña</label>
+            <div class="formulario_grupo-input">
+                <input type="password" name="password" placeholder="CONTRASEÑA" class="formulario_input" id="password" required>
+                <i class="formulario_validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario_input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+        </div>
+
+        <!-- Repetir Contraseña -->
+        <div class="formulario_grupo" id="grupo_password2">
+            <label for="password2" class="formulario_label">Repetir Contraseña</label>
+            <div class="formulario_grupo-input">
+                <input type="password" name="confirm_password" placeholder="CONFIRMAR CONTRASEÑA" class="formulario_input" id="password2" required>
+                <i class="formulario_validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario_input-error">Ambas contraseñas deben ser iguales.</p>
+        </div>
+
+        <!-- Términos y Condiciones -->
+        <div class="formulario_grupo" id="grupo_terminos">
+            <label class="formulario_label">
+                <input class="formulario_checkbox" type="checkbox" name="terminos" id="terminos" required>
+                Acepto los 
+                <a href="#" onclick="abrirVentana(); return false;">Términos y Condiciones</a>
+            </label>
+        </div>
+
+        <!-- Mensaje de error general -->
+        <div class="formulario_mensaje" id="formulario_mensaje">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente</p>
+        </div>
+
+        <!-- Botón de Enviar -->
+        <div class="formulario_grupo formulario_grupo-btn-enviar">
+            <button type="submit" name="signupSubmit" class="formulario_btn">Enviar</button>
+        </div>
+
+    </form>
+</main>
+
+<!-- Script para ventana emergente -->
+<script>
+    function abrirVentana() {
+        var ancho = screen.width;
+        var alto = screen.height;
+        window.open("terminos.php", "TerminosCondiciones", "width=" + ancho + ",height=" + alto);
+    }
+</script>
+</body>
+</html>

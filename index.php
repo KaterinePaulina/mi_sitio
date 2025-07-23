@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>papeleria bellotas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0">
+  <link rel="stylesheet" href="CSS/estilos.css">
+  <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">-->
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+  <body>
+   <header>
+    <div class="titulo_p">
+    <center> <h1>BELLOTAS</h1></center>
+    </div>
+   <div id="header">
+    <ul class="nav">
+    <li><a href="login.php">Ingresar</a>
+    <li><a href="index.php">Home</a> 
+
+      
+        
+<li><a href="ayuda.php">Ayuda</a>
+
+    </li>
+   </ul>
+
+<div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar..." class="search-box">
+            <span class="search-icon"><i class="fas fa-search" onclick="searchText()"></i></span>
+        </div>
+   </div>
+   <img src="img/bellotas.jpg" class="img-hed">
+<br><br>
+  <main>
+
+
+<section class="sesion1">
+<h1>Papeleria bellotas</h1>
+<div class="cont_img">
+  <img src="img/bellota.png" alt="">
+</div>
+<div class="cont_inf">
+En Papelería Bellotas nos dedicamos a brindarte los mejores materiales escolares, de oficina y arte, con productos de alta calidad, atención cercana y precios accesibles. Somos tu aliado diario para que tus ideas cobren vida, tu escuela sea más divertida y tu trabajo más eficiente.
+¡Desde una simple pluma hasta los proyectos más creativos, en Bellotas lo encuentras todo!
+
+</p>
+</div>
+
+</section>
+
+
+
+<!--sesion2-->
+<section class="sesion2" id="instrumentos">
+  <h3>Productos</h3>
+     <p class="after">los mas recientes (acaban de llegar)</p>
+      <div class="card">
+  <div class="content-card">
+  <div class="people">
+<!--imagenes -->
+    <img src="img/lapicero.jpg" alt="">
+  </div>
+  <div class="texto-team">
+    <h4>Bolígrafos BIC Cristal</h4>
+    <p></p>
+  </div>
+  </div>
+
+  <div class="content-card">
+    <div class="people">
+      <img src="img/marcador.jpg" alt=""> 
+    </div>
+    <div class="texto-team">
+      <h4>Marcadores Mildliner de Zebra</h4>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <div class="people">
+      <img src="img/gomas.jpg" alt="">
+    </div>
+    <div class="texto-team">
+      <h4>Borradores con diseño</h4>
+      <p></p>
+    </div>
+  </div>
+    </section>
+   
+
+
+
+<!--sesion3-->
+   <section class="sesion3" id="servicio">
+     <div class="contenedor">
+      <h3>Lo mas vendido</h3>
+      <p class="after">Siempre lo mejor para ti</p>
+      <div class="servicios">
+        <div class="caja-servicios">
+          <img src="img/cuaderno.jpg" alt="">
+          <h4>Cuaderno Profesional Scribe de pasta dura</h4>
+          <p>Ideal para estudiantes de secundaria, preparatoria y universidad. Su resistencia y diseño moderno lo hacen uno de los favoritos</p>
+      </div>
+      <div class="caja-servicios">
+        <img src="img/colores.jpeg" alt="">
+        <h4>Colores Mapita 24 piezas</h4>
+        <p>Perfectos para niños en edad escolar. Tienen colores vivos, mina resistente y excelente calidad a buen precio</p>
+        </div>
+        <div class="caja-servicios">
+          <img src="img/corrector.jpeg" alt="">
+          <h4>Corrector líquido BIC blanco 20 ml</h4>
+          <p>Clásico y efectivo. De secado rápido, ideal para corregir sin dejar manchas ni grumos. Muy usado tanto en escuelas como oficinas.</p>
+        </div>
+      </div>
+     </div>
+   </section>
+
+
+
+</script>
+   </section>
+ </body>
+</html>

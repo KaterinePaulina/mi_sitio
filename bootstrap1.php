@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ROCK</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/rock.css">
+    <script src="JS/rap.js"></script>
+</head>
+<body class="container">
+    <header>
+        <div class="titulo_p text-center">
+            <h1>ROCK</h1>
+        </div>
+        <nav id="header" class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <ul class="navbar-nav mr-auto nav">
+                    <li class="nav-item"><a class="nav-link" href="validacion.html">Ingresar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rap.php">Rap</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="rock.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Rock
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="cantantes.php">Cantantes</a>
+                            <a class="dropdown-item" href="instrumentos.php">Instrumentos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="clasica.php">Clasico</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" action="/search" id="search" method="get" name="searchForm">
+                    <input class="form-control mr-sm-2 search" type="search" placeholder="Buscar..." aria-label="Search" name="q">
+                    <button class="btn btn-outline-success my-2 my-sm-0 buscar" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <section class="sesion1">
+            <h1>El origen del rock</h1>
+            <div class="row">
+                <div class="col-md-8 cont_inf">
+                    <p>El origen del rock puede rastrearse hasta mediados del siglo XX, cuando se gestó a partir de la combinación de varios estilos musicales, principalmente el rhythm and blues, el country, el gospel y el blues...</p>
+                </div>
+                <div class="col-md-4 cont_img">
+                    <img src="img/rock.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <section class="video-container mt-5">
+            <h1>Influencia del Rock en México</h1>
+            <div class="inf">
+                <p>Los jóvenes artos porque la industria de que únicamente lo hicieran rock en ingles los comenzaron a producir rock lo que en es ese momento se encontraba mal visto por la sociedad...</p>
+            </div>
+            <video controls class="w-100">
+                <source src="img/video.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </section>
+
+        <section class="work contenedor" id="trabajo">
+            <h3>MUSICA</h3>
+            <p class="after">Hace tu vida divertida</p>
+            <div class="botones-work">
+                <ul class="nav justify-content-center">
+                    <li class="filter active nav-item" data-nombre='todos'><a class="nav-link" href="#">Todos</a></li>
+                    <li class="filter nav-item" data-nombre='diseño'><a class="nav-link" href="#">Instrumentos</a></li>
+                    <li class="filter nav-item" data-nombre='programacion'><a class="nav-link" href="#">Cantantes</a></li>
+                    <li class="filter nav-item" data-nombre='marketing'><a class="nav-link" href="#">Danza</a></li>
+                </ul>
+            </div>
+            <div class="row galeria-work">
+                <div class="col-md-4 cont-work programacion">
+                    <div class="img-work">
+                        <img src="img/Robert.webp" alt="" class="img-fluid">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Robet</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 cont-work programacion">
+                    <div class="img-work">
+                        <img src="img/Mick.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Mick Jagger</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 cont-work programacion">
+                    <div class="img-work">
+                        <img src="img/Freddie.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Freddie Mercury</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 cont-work diseño">
+                    <div class="img-work">
+                        <img src="img/bateria.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Bateria</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 cont-work diseño">
+                    <div class="img-work">
+                        <img src="img/guitarraelectrica.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Guitarra electrica</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 cont-work diseño">
+                    <div class="img-work">
+                        <img src="img/bajo.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Bajo</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 cont-work marketing">
+                    <div class="img-work">
+                        <img src="img/baile-rock.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Headbanging</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 cont-work marketing">
+                    <div class="img-work">
+                        <img src="img/twist.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Twist</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 cont-work marketing">
+                    <div class="img-work">
+                        <img src="img/Shimmy.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Shimmy</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer mt-5 py-4 bg-dark text-white">
+        <div class="container text-center">
+            <h2>Puedes encontrarnos en las siguientes redes sociales</h2>
+            <div class="marca-logo">
+                <a href="https://www.youtube.com/channel/UCMG5ViuxZK7GtpkJZXdlEvA=" target="_blank"><img src="img/youtu.png" alt=""></a>
+                <a href="https://www.facebook.com/profile.php?id=100047506792349=" target="_blank"><img src="img/face.png" alt=""></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img src="img/gmail.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/filtro.js"></script>
+</body>
+</html>

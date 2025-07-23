@@ -1,0 +1,83 @@
+<?php
+
+session_start();
+//
+$sessData = !empty($_SESSION['sessData'])?$_SESSION['sessData']:'';
+//
+if(!empty($sessData['status']['msg'])){
+	$statusMsg = $sessData['status']['msg'];
+$status = $sessData['status']['type'];
+unset($_SESSION['sessData']['status']);
+}
+$postData = array();
+if (!empty($sessData['postData'])) {
+	$postData = $sessData['postData'];
+	unset($_SESSION['postData']);
+}
+//
+if(!empty($sessData['userLoggedIn'])&& !empty($sessData['userId'])){
+	include_once 'user.php';
+	$user = new User();
+	$conditions['where'] = array(
+		'id' => $sessData['userId']
+	);
+$conditions['return_type'] = 'single';
+$userData = $user->getRows($conditions);
+}
+?>
+<?php if(!empty($userData)){ ?>
+<h2>Welcome <?php echo $userData['first_name']; ?>!</h2>
+<a href="userAccount.php?logoutSubmit=1" class="logout">Regresar</a>
+<div class="regisFrm">
+	<p><b>Name: </b><?php echo $userData['first_name'].' '.$userData['last_name']; ?></p>
+	<p><b>Email: </b><?php echo $userData['email']; ?></p>
+	<p><b>Phone: </b><?php echo $userData['phone']; ?></p>
+</div>
+<?php }else{ ?>
+
+<!---->
+<?php if(!empty($statusMsg)){ ?>
+<div class="status-msg <?php echo $status; ?>"><?php echo $statusMsg; ?></div>
+<?php } ?>
+
+<!--Define que el documento esta bajo el estandar de HTML 5-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8/" />
+	<meta name="viewport" content="width=device-width, initial-scale=0">
+	<title>INGRESAR</title> <!--es el titulo que se mostrara en la parte superior de la pagina-->
+	<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+	<!--link hacia el archivo de estilos css-->
+	<link rel="stylesheet" href="CSS/login.css"> <!--la conexion para que este este conectado a la hoja de estilo-->
+</script>
+</head>
+<body>
+	<div id=contenedor>
+		<div id=contenedorcentrado>
+			<div id=login>
+				<form action="mediciones.php" id="loginform" method="POST">
+					<label for="Email">Email</label>
+					<input type="email" name="email" placeholder="EMAIL" value="<?php echo !empty($postData['email'])?$postData['email']:'';?>" required="">
+					<label for="password">Contraseña</label>
+					<input id="password" type="password" placeholder="Contraseña" name="password" required="">
+					<button type="submit" title="Ingresar" name="Ingresar">Login</button> <!--el boton que te permitira enviar los datos ingresados-->
+				</form>
+			<?php } ?>
+		</div>
+			<div id="derecho"></div>
+				<div class="titulo">
+					Bienvenido :) <!-- el titulo que se muestra en la parte superior del contenedor-->
+				</div>
+				<hr>
+				<div class="pie-form">
+					<a href="forgotPassword.php">¿Perdiste tu contraseña?</a> <!-- se mostrara debajo del boton para darte mas opciones en caso de que no recuerdes la contraseña-->
+					<a href="registrar.php">¿No tienes Cuenta?, Registrate</a><!-- se mostrara debajo del boton para darte mas opciones en caso de que no tengas tu cuenta-->
+					<hr>
+					<a href="index.php">Volver</a> <!--es el que se mostrara en la parte inferior del contendor-->
+				</div>
+			</div>
+		</div>
+	  </div>
+   </body>
+</html>
