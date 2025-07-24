@@ -3,14 +3,14 @@
 session_start(); 
  
 // Load and initialize user class 
-include 'user.php'; 
+include 'user.html'; 
 $user = new User(); 
  
 $postData = $statusMsg = $valErr = ''; 
 $status = 'error'; 
-$redirectURL = 'login.php'; 
+$redirectURL = 'login.html'; 
 if(isset($_POST['signupSubmit'])){ 
-    $redirectURL = 'registrar.php'; 
+    $redirectURL = 'registrar.html'; 
      
     // Get user's input 
     $postData = $_POST; 
