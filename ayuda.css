@@ -1,0 +1,79 @@
+body{
+	background: #D0D3D4 ;
+}
+
+ h1{
+  color: black;
+  font-size: 65px;
+}
+
+
+/* las preguntas que se despliegan */
+.container2 {
+  margin-right: 60px;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.info-box {
+	text-align: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.info-title {
+	text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.info-title:hover {
+    color: #007BFF;
+}
+
+.info-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.info-content.show {
+    max-height: 200px; /* Ajusta este valor según la cantidad de contenido */
+}
+
+
+
+.boton{
+	position: center;
+	align-items: center;
+	display: inline-block;
+	padding: 11px 25px;
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
+	border-radius: 10px;
+}
+
+.boton:hover{
+	background-color: steelblue;
+}
+
+.info-content img{
+  margin-top: 45px;
+  height: 4%;/*alto de las imagenes dentro de los contenedores*/
+  width: 4%;/*largo de las imagenes*/
+  margin-right: 50px;
+  transition: transform 0.6s ease;
+}
+
+.info-content img:hover {
+transform: scale(1.10); /* Escala ligeramente la imagen al pasar el ratón */
+}

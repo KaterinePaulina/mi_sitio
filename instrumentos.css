@@ -1,0 +1,227 @@
+:root{
+  --color1: rgb(219,144,5);
+  --color2: rgba(23, 180, 83, 0.877);
+  --color3: rgba(11,194,211, 0.623);
+  --fondo: #f2f2f2;
+  --titulos: 33px;
+  --margenes: 0px;
+  --espacios: 10px;
+  --espacios-contenido:45px;
+}
+
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex: ;
+  direction:column;
+  height: 100%; 
+  background: #D7DBDD;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.img-hed{
+  width: 100%;
+  height: auto;
+}
+
+.titulo_p h1{
+  color: black;
+  font-size: 50px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+#header { /* barra para el navegador*/
+    width:100%; /* el largo del contendeor */
+    height:40px;/* ancho del contendedor  */
+    margin:auto;
+    background-color: black; /* color de la linea de fondo para el navegador */
+    position:relative;
+}
+
+.nav > li {
+float:left;
+}
+
+.nav li a { /* los recuadros*/
+text-decoration: none;
+background:#7FB3D5 ; /* color de cada recuadro */
+color:#FDFEFE;/* las letras de cada uno de los temas y subtemas y del borde de cada recuadro */
+display:block; 
+border:0px solid;
+padding:10px 12px;
+border-radius: 10px; /* de este dependera que tan redondo o no estara este */
+}
+
+.nav li a:hover {
+background: #2580a2; /* Color de las pestañas al pasar el cursor */
+color:#FFFFFF; 
+}
+
+.nav li ul {
+display:none;
+position:absolute;
+min-width: 140px;
+}
+
+.nav li:hover > ul {
+display:block;
+}
+
+.nav li ul li {
+position:relative;
+}
+
+.nav li ul li ul {
+right:-140px;
+top:0;
+}
+
+.search-container { /* caja de texto del buscador */
+  margin-left:-20px;
+width: 300px;
+height: 150px;
+padding: 10px;
+border: 1px solid transparent;
+border-radius: 5px;
+float: right;
+border-radius: 10px;
+}
+
+
+.buscar[type="submit"] {
+background-color: #007bff;/*color del boton de buscar */
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+float: right;
+}
+
+h1 {
+font-size: 30px;
+color: white;
+}
+
+
+/* instrumentos */
+
+.cont {
+    text-align: center;
+}
+
+.clickable-image {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.clickable-image:hover {
+    transform: scale(1.1);
+}
+
+.batery{
+  width: 400px;
+  height: 410px;
+  margin-top: 100px;
+  float: left;
+}
+
+.gitarry{
+  width: 300px;
+  height: 410px;
+  float: right;
+  margin-top: 55px;
+  margin-right: 180px;
+}
+
+.bajo{
+  width: 300px;
+  height: 410px;
+  float: right;
+  margin-top: -410px;
+}
+
+.info-titler{
+  margin-top: 600px;
+  text-align: center;
+  margin-right: 500px;
+}
+
+
+/* las preguntas que se despliegan */
+.container2 {
+  margin-top: 500px;
+  margin-right: 60px;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.info-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.info-title {
+  text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.info-title:hover {
+    color: #007BFF;
+}
+
+.info-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.info-content.show {
+    max-height: 200px; /* Ajusta este valor según la cantidad de contenido */
+}
+
+
+/* se inicia con el gif */
+.GIF{
+  margin-top: 70px;
+  text-align: center;
+}
+
+/* redes sociales */
+.redes{
+  margin-top: 100px;/* es el espacio que se da entre el elemento de arriba */
+  font-size: 13px;/* tamaño del titulo*/
+  line-height: 5px;
+  color: black;
+  font-weight: 10;/*hace que las letras esten como en negritas*/
+}
+
+.footer img{
+  margin-top: 45px;
+  height: 4%;/*alto de las imagenes dentro de los contenedores*/
+  width: 4%;/*largo de las imagenes*/
+  margin-right: 50px;
+  transition: transform 0.6s ease;
+}
+
+.footer img:hover {
+transform: scale(1.10); /* Escala ligeramente la imagen al pasar el ratón */
+}

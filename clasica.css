@@ -1,0 +1,426 @@
+:root{
+  --color1: rgb(219,144,5);
+  --color2: rgba(23, 180, 83, 0.877);
+  --color3: rgba(11,194,211, 0.623);
+  --fondo: #f2f2f2;
+  --titulos: 33px;
+  --margenes: 0px;
+  --espacios: 10px;
+  --espacios-contenido:45px;
+}
+
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex: ;
+  direction:column;
+  height: 100%; 
+  background: ;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background:#FFECA6 ;
+}
+
+.img-hed{
+  width: 100%;
+  height: auto;
+}
+
+.titulo_p h1{
+  color: black;
+  font-size: 80px;
+  font-family: Monotype Corsiva;
+}
+
+ul{
+  list-style-type: none;
+}
+
+#header { /* barra para el navegador*/
+    width:100Spx; /* el largo del contendeor */
+    height:60px;/* ancho del contendedor  */
+    margin:auto;
+    background-color: #FFDC57 ; /* color de la linea de fondo para el navegador */
+    position:relative;
+}
+
+.nav > li {
+margin-top: 10px;  
+float:left;
+}
+
+.nav li a { /* los recuadros*/
+text-decoration: none;
+background:#FFECA6 ; /* color de cada recuadro */
+color:black;/* las letras de cada uno de los temas y subtemas y del borde de cada recuadro */
+display:block; 
+border:0px solid;
+padding:10px 12px;
+border-radius: 10px; /* de este dependera que tan redondo o no estara este */
+}
+
+.nav li a:hover {
+background: #FFDC57; /* Color de las pestañas al pasar el cursor */
+color:#FFFFFF; 
+}
+
+.nav li ul {
+display:none;
+position:absolute;
+min-width: 140px;
+}
+
+.nav li:hover > ul {
+display:block;
+}
+
+.nav li ul li {
+position:relative;
+}
+
+.nav li ul li ul {
+right:-140px;
+top:0;
+}
+
+.search-container { /* caja de texto del buscador */
+  margin-left:-20px;
+width: 300px;
+height: 150px;
+padding: 10px;
+border: 1px solid transparent;
+border-radius: 5px;
+float: right;
+border-radius: 10px;
+}
+
+
+.buscar[type="submit"] {
+  margin-top: 10px;
+background-color: black;/*color del boton de buscar */
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+float: right;
+}
+
+h1 {
+font-size: 30px;
+color: white;
+}
+
+/* da comienzo a la sesion 1*/
+.sesion1 { /* sesion1 con parrafo*/
+  padding: var(--margenes) 50px;
+  width: 93%; /* es lo largo del contenedor */
+  max-width: 100%; /* ancho del contenedor */
+  text-align: justify;
+  overflow: hidden;
+  left: 50%;
+  background: #FFF8E1;/* color del fondo de pantalla*/
+  background-position: center; /* posicion del fondo de pantalla*/
+ margin-top: 70px;/* es el espacio que se da entre el elemento de arriba */
+}
+
+.sesion1 h1{ /* titulo de la seccion*/
+  border-style: hidden;
+  font-size: 40px;/* tamaño del titulo*/
+  color: black; /* color del titulo*/
+  text-align: center;
+  margin-bottom: var(--espacios);
+  padding: var(--imagenes) 0;
+  width: 350%; /* ancho del contenedor sesion1*/
+  max-width: 100%; /* ancho maximo para contenido */
+  overflow: hidden;
+  font-family:  Monotype Corsiva;/* tipo de letra */
+}
+
+.sesion1 p{ /* parrafo agregado */
+  font-size: 20px; /* tamaño de las letras */
+  font-weight: 450; /* para colocar como las letras en negritas */
+  color: black;
+  font-family: candara; /* tipo de letra */
+}
+
+.cont_inf{
+    width: 50%; /* Ancho fijo para el contenedor de información */
+    padding: 40px; /* Mayor padding para mejor presentación */
+    text-align: left; /* Texto alineado a la izquierda */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+}
+
+.sesion1 img{
+  float: right;/* alinear la imagen a la izquierda */
+  border: 0px solid #ccc;/* define un borde para el contenedor */
+  margin-top: 25px; /* definir la posision de la imagen en la parte superior del contenedor */
+  margin-bottom: 40px;/* definir la posicion de la imagenen la parte inferior del contendor */
+  margin-right: 40px;/* definir la posicion de la imagen en la parte izquierda del contenenor */
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;/* Transición suave al hacer hover */
+}
+
+
+/* contendor de la imagen */
+.cont_img{
+  width: 25%;/* ancho fijo para el contenedor */
+  height: 100%;/* hace que la imagen abarque todo el contenedor */
+  object-fit: cover; /* asegura que la imagen cubra el espacio sin que ese se distorcione */
+  float: right;/* alinear la imagen a la izquierda */
+  background: hidden;
+  margin-top: 5; /* definir la posision de la imagen en la parte superior del contenedor */
+  margin-bottom: 20px;/* definir la posicion de la imagenen la parte inferior del contendor */
+  margin-right: 40px;/* definir la posicion de la imagen en la parte izquierda del contenenor */
+   transition: transform 0.3s ease;
+}
+
+.cont_img:hover {
+transform: scale(1.05); /* Escala ligeramente la imagen al pasar el ratón */
+}
+
+
+/* se inicia el intento de video :) */
+.video-container {
+  width: 80%;/*ancho del contenedor*/
+  height: 900%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 200px;
+  background: white; /* color del contenedor  */
+  margin-top: 70px; /* definir la posision de la imagen en la parte superior del contenedor */
+}
+
+.video-container h1{
+  margin-top: -150px;
+  font-size: 40px;/* tamaño del titulo*/
+  color: #FFD100 ; /* color del titulo*/
+  text-align: center;
+  font-family:  Monotype Corsiva;/* tipo de letra */
+}
+
+.inf{
+  width: 25%;/* ancho fijo para el contenedor */
+  height: 100%;/* hace que la imagen abarque todo el contenedor */
+  object-fit: cover; /* asegura que la imagen cubra el espacio sin que ese se distorcione */
+  float: right;/* alinear la imagen a la izquierda */
+  background: hidden;
+  margin-top: 0; /* definir la posision de la imagen en la parte superior del contenedor */
+  margin-bottom: 20px;/* definir la posicion de la imagenen la parte inferior del contendor */
+  margin-right: 40px;/* definir la posicion de la imagen en la parte izquierda del contenenor */
+  transition: transform 0.3s ease;
+}
+
+.inf p{
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  margin-right: -50px;/* definir la posicion de la imagen en la parte izquierda del contenenor */
+  }
+
+video {
+  width: 50%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-position: left;
+}
+
+/* se da inicio a la sesion 3 */
+.contenedor{ /* configura todos los h3 y p con class contendeor  */ 
+  margin: auto;
+  padding: var(--margenes) 0;
+  width: 100%;
+  max-width: 1000px;/* espacio a lo ancho sobre el contenido */
+  text-align: center;
+  overflow: hidden;
+  margin-top: -130px;
+}
+
+.contenedor h3{
+  font-size: var(--titulos);
+  color: black;/* cambia el titulo que dice nuestros servicios */
+  margin-bottom: var(--espacios);
+  font-family:  Monotype Corsiva;
+}
+
+.contenedor p{
+  font-size: var(--subtitulos);
+  font-weight: 300;
+  color: black;
+}
+
+.sesion3{
+  background-position: center;
+  background: url(../img/fondoclas.jpg);/* imagen de fondo */
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 12%;
+  height: 100px;/* ancho de la imagen */
+  width: 78%;/* largo de la imagen */
+  margin-top: 50px;/* es el espacio que se da entre el elemento de arriba */
+}
+
+.servicios{/* el contendio de  */
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  margin: 15px;
+  flex-wrap: wrap;
+}
+
+.caja-servicios{
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}
+
+.caja-servicios>h4{
+  margin-bottom: var(--espacios);
+  color: #21618C ;/* el color que se le dara a creativos y asombrosos */
+}
+
+.caja-servicios>p{
+  text-align: center;
+}
+
+.sesion3 img{
+  max-width: 30%;
+  height: 90px/*alto de las imagenes dentro de los contenedores*/;
+  width: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: center;
+  margin-right: auto;
+}
+
+.sesion2{
+  margin: auto;
+  padding: var(--imagenes) 0;
+  width: 95%; /* el tamaño de las imagenes y lo demas agregado */
+  max-width: 100%;/* lo largo donde se encuentran ubicadas las imagenes  */
+  text-align: center; /* hace que este centrado en la pagina */
+  overflow: hidden;
+  background: #FFF8E1; /* color del fondo */
+  margin-top: 50px; /* define la posicion, en este caso hice que tenga 50px de espacio */
+}
+
+.sesion2 h3{
+  font-size: var(--titulos);
+  color:black ; /* cambia el color del titulo */
+  margin-bottom: var(--espacios);
+  font-family:  Monotype Corsiva;
+}
+
+.sesion2 p{
+  font-size: var(--subtitulos);
+  font-weight: 400; /* hace que las letras esten en negritas del subtema*/
+  color: black; /* cambia el color de el subtema */
+}
+
+.after::after{/* linea que aparece debajo de siempre mejorando para ti */
+  content: '';
+  display: block;
+  margin: auto;
+  margin-top: var(--espacios);
+  width: 250px;/*lo largo de la linea*/
+  height: 2px;
+  background: var(--color1);
+  margin-bottom: var(--espacios-contenidos);
+  background-color: black;/* color de la linea */
+}
+
+.card{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.content-card{
+  width: 31%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); /*profundidad al contenedor*/
+  overflow: hidden;
+  height: 670px;/*el espacio que se le da hacia bajo al contenedor*/
+}
+
+.peope{
+  height: 80px;
+}
+
+.content-card img{
+  width: 100%;
+  height: 80%;/*alto de las imagenes dentro de los contenedores*/
+  object-fit: cover;
+transition: transform 0.3s ease;
+}
+
+.content-card img:hover {
+transform: scale(1.05); /* Escala ligeramente la imagen al pasar el ratón */
+}
+
+.texto-team{
+  height: 20%;/*alto de las imagenes dentro de los contenedores*/
+  width: 100%;
+  padding: var(--espacios) 0;/* espacio para las letras dentro del contenedor, debajo de cada imgen  */
+}
+     
+/* se da inicio a las columnas */
+.cont{
+  display: grid;
+  grid-template-columns: 1fr 1fr;/* dos columnas de igual de ancho */
+  gap: 20px;/* espacio entre una columna y otra */
+}
+
+.column{
+  margin-top: 70px;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height:400px;/* ancho del contendedor  */
+}
+
+.column h2{
+  text-align: center;/* alinea texto al centro*/
+  font-size: 35px;/* tamaño de letra*/
+  font-family: Monotype Corsiva;;
+  color: #FFD100 ; /* color del titulo*/
+}
+
+.cont img{
+width: 300px;/* altura*/
+height: auto;/* parte ancha*/
+/* border: 3px solid #fff;*/
+border-radius: 10px;/*borde redondo */
+/box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);/ 
+}
+
+
+/* redes sociales */
+.redes{
+  margin-top: 100px;/* es el espacio que se da entre el elemento de arriba */
+  font-size: 13px;/* tamaño del titulo*/
+  line-height: 5px;
+  color: black;
+  font-weight: 10;/*hace que las letras esten como en negritas*/
+}
+
+.footer img{
+  margin-top: 45px;
+  height: 4%;/*alto de las imagenes dentro de los contenedores*/
+  width: 4%;/*largo de las imagenes*/
+  margin-right: 50px;
+  transition: transform 0.6s ease;
+}
+
+.footer img:hover {
+transform: scale(1.10); /* Escala ligeramente la imagen al pasar el ratón */
+}
+  

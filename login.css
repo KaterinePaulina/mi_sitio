@@ -1,0 +1,135 @@
+body {
+    font-family: 'Overpass', sans-serif; /*tipo de letra*/
+    font-weight: normal; /* para agregar a las letras un grosor */
+    font-size: 100%;/* tamaño de las letras */
+    color: #1b262c;/* color de las letras */
+    margin: 0;/* el magen asignado */
+    background-color: #271e02;/* el color del fondo */
+}
+
+#contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 0;/* margen asignado para el contenedor */
+    padding: 0; /* elimina espacios de relleno */
+    min-width: 100vw; /* hace que el documentos utilice todo el espacio disponible */
+    min-height: 100vh;/**/
+    width: 100%;/*largo de la imagen */
+    height: 100%;/* ancho de la imagen  */
+
+    background: url(../img/fondo.jpg); /* la imagen que estara de fondo en toda la pagina */
+    background-repeat: no-repeat;/*para que no se repita la imagen agregada*/
+    background-position: center;/* para que se centre la imagen  */
+    background-size: cover;/* para que esta abarque todo el espacio en el fondo */
+}
+
+#central {
+    max-width: 320px;
+    width: 100%;/* el largo */
+}
+
+.titulo {
+    font-size: 250%;/* tamaño de las letras */
+    color:#695d16;/* color de las letras */
+    text-align: center;/* para que el texto se encuentre alineado */
+    margin-bottom: 20px;/* margen de los botones */
+}
+
+#login {
+    width: 100%; /* el largo */
+    padding: 50px 30px; /* espacios */
+    background-color: #b8b177;
+    
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    
+    box-sizing: border-box;
+}
+
+#login input {
+    font-family: 'Overpass', sans-serif;/*tipo de letra*/
+    font-size: 110%;/* tamaño de las letras */
+    color: #1b262c;/* color de las letras */
+    
+    display: block;
+    width: 100%;/* el largo */
+    height: 40px;/* el ancho*/
+    
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 10px;
+    
+    box-sizing: border-box;
+    
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+#login input::placeholder {
+    font-family: 'Overpass', sans-serif;/*tipo de letra*/
+    color: #E4E4E4;/* color de las letras */
+}
+
+#login button {
+    font-family: 'Overpass', sans-serif;/*tipo de letra*/
+    font-size: 110%;/* tamaño de las letras */
+    color:#1b262c;/* color de las letras */
+    width: 100%;/* el largo */
+    height: 40px;/* el ancho*/
+    border: none;/* el borde */
+    
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    
+    background-color: #8d8a58;/*color de fondo*/
+    
+    margin-top: 10px;
+}
+
+#login button:hover {
+    background-color: #4b4409;
+    color:#c2ae00;
+}
+
+.pie-form {
+    font-size: 90%;
+    text-align: center;    
+    margin-top: 15px;
+}
+
+.pie-form a {
+    display: block;
+    text-decoration: none;
+    color: #857c4b;
+    margin-bottom: 3px;
+}
+
+.pie-form a:hover {
+    color: #3d3402;
+}
+
+.inferior {
+    margin-top: 10px;
+    font-size: 90%;
+    text-align: center;
+}
+
+.inferior a {
+    display: block;
+    text-decoration: none;
+    color: #695d16;
+    margin-bottom: 3px;
+}
+
+.inferior a:hover {
+    color: #695d16;
+}

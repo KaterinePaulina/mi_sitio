@@ -1,0 +1,283 @@
+:root{
+  --color1: rgb(219,144,5);
+  --color2: rgba(23, 180, 83, 0.877);
+  --color3: rgba(11,194,211, 0.623);
+  --fondo: #f2f2f2;
+  --titulos: 33px;
+  --margenes: 0px;
+  --espacios: 10px;
+  --espacios-contenido:45px;
+}
+
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex: ;
+  direction:column;
+  height: 100%; 
+  background: #D7DBDD;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.img-hed{
+  width: 100%;
+  height: auto;
+}
+
+.titulo_p h1{
+  color: black;
+  font-size: 50px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+#header { /* barra para el navegador*/
+    width:100Spx; /* el largo del contendeor */
+    height:40px;/* ancho del contendedor  */
+    margin:auto;
+    background-color: black; /* color de la linea de fondo para el navegador */
+    position:relative;
+}
+
+.nav > li {
+float:left;
+}
+
+.nav li a { /* los recuadros*/
+text-decoration: none;
+background:#7FB3D5 ; /* color de cada recuadro */
+color:#FDFEFE;/* las letras de cada uno de los temas y subtemas y del borde de cada recuadro */
+display:block; 
+border:0px solid;
+padding:10px 12px;
+border-radius: 10px; /* de este dependera que tan redondo o no estara este */
+}
+
+.nav li a:hover {
+background: #2580a2; /* Color de las pestañas al pasar el cursor */
+color:#FFFFFF; 
+}
+
+.nav li ul {
+display:none;
+position:absolute;
+min-width: 140px;
+}
+
+.nav li:hover > ul {
+display:block;
+}
+
+.nav li ul li {
+position:relative;
+}
+
+.nav li ul li ul {
+right:-140px;
+top:0;
+}
+
+
+
+.buscar[type="submit"] {
+background-color: #007bff;/*color del boton de buscar */
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+float: right;
+}
+
+h1 {
+font-size: 30px;
+color: white;
+}
+
+
+
+ /* se da inicio a la galeria */
+
+.gallery-container {
+     width: 100%; /* es lo largo del contenedor */
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    position: center;
+    margin-top: 70px;/* es el espacio que se da entre el elemento de arriba */
+}
+
+.gallery-item {
+    margin-top: 90px;
+    position: relative;
+    width: 430px;/*ancho*/
+    height: 600px;
+    overflow: hidden;
+}
+
+.gallery-image {
+  background: steelblue;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* recuadros */
+.container {
+  margin-left: 60px;
+  margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 120%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 22%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.info-image {
+    width: 100%;
+    height: auto;
+}
+
+.info-content {
+    padding: 15px;
+}
+
+.info-content h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.info-content p {
+    margin: 0;
+    font-size: 1em;
+    color: #666;
+}
+
+
+
+/* porcentaje 
+.circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.mask, .fill {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    clip: rect(0px, 150px, 150px, 75px);
+}
+
+.mask.full, .circle .fill {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: #3498db;
+}
+
+.fill {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: #3498db;
+}
+
+.mask.full {
+    transform: rotate(0deg);
+    transition: transform 1s linear;
+}
+
+.fill {
+    transform: rotate(0deg);
+    transition: transform 1s linear;
+}*/
+
+/* redes sociales */
+.redes{
+  margin-top: 100px;/* es el espacio que se da entre el elemento de arriba */
+  font-size: 13px;/* tamaño del titulo*/
+  line-height: 5px;
+  color: black;
+  font-weight: 10;/*hace que las letras esten como en negritas*/
+}
+
+.footer img{
+  margin-top: 45px;
+  height: 4%;/*alto de las imagenes dentro de los contenedores*/
+  width: 4%;/*largo de las imagenes*/
+  margin-right: 50px;
+  transition: transform 0.6s ease;
+}
+
+.footer img:hover {
+transform: scale(1.10); /* Escala ligeramente la imagen al pasar el ratón */
+}

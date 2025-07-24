@@ -1,0 +1,173 @@
+{
+    box-sizing: border-box;
+} 
+
+body{
+    font-family: "Roboto", sans-serif;/*definir la fuente determinada al documento*/
+    background: #d6b583;/*el color del fondo*/
+}
+
+main{
+    max-width: 800px;/*Establece el ancho máximo del elemento <main>*/
+    width: 90%;/* Establece el ancho*/
+    margin: auto;; /*Centra el elemento horizontalmente dentro de su contenedor principal.*/
+    padding: 40px;/*Establece un relleno interior alrededor del contenido del elemento*/
+}
+
+.formulario {/* Selecciona un elemento con la clase formulario*/
+    display: grid;; /*Establece el modelo de layout del elemento como grid*/
+    grid-template-columns: 1fr 1fr;/*Divide el espacio en dos columnas de igual ancho dentro del grid.*/
+    gap: 20px;/*Establece un espacio de 20 píxeles entre las filas y las columnas del grid.*/
+}
+
+.formulario_label {/*Selecciona elementos con la clase formulario__label*/
+    display: block;/*Hace que los elementos de etiqueta sean bloques*/
+    font-weight: 700;/*establece el peso de la fuente en negrita.*/
+    padding: 10px;/* Agrega un espacio de relleno de 10 píxeles alrededor del contenido*/
+    cursor: pointer;/*Cambia el cursor a un puntero al pasar sobre el elemento*/
+}
+
+.formulario_grupo-input {
+    position: relative;/*Establece el posicionamiento relativo para los elementos hijos*/
+}
+
+.formulario_input {/*elementos en la clase formulario, son las cajas de texto*/
+    width: 100%;/*Hace que el ancho del input sea del 100% del contenedor*/
+    background: #fff;/*Establece un color de fondo para las casillas*/
+    border: 3px solid transparent;/*Establece un borde */
+    border-radius: 3px;/*el radio del borde*/
+    height: 45px;/*Establece la altura del input */
+    line-height: 45px;/*Ajusta la altura de la línea del texto para centrarlo verticalmente dentro*/
+    padding: 8px 40px 0 10px;/*Establece el relleno*/
+    transition: .3s ease all;/* Aplica una transición suave a las propiedades*/
+    height: 30px;/* el ancho de las cajas de texto */
+    width: 250px;/* es el largo de las cajas de texto */
+}
+
+.formulario_input:focus {/*Se aplica cuando un input dentro del formulario es seleccionado*/
+    border: 3px solid #a19146;/*Establece un borde sólido de color azul*/
+    outline: none;/*Elimina el contorno predeterminado que aparece alrededor del input cuando está enfocado.*/
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);/*Agrega una sombra alrededor del input cuando está enfocado*/
+}
+
+.formulario_input-error {/*elementos con la clase formulario__input-error, que se utilizan para mostrar mensajes de error de validación*/
+    font-size: 12px;/*Establece el tamaño de fuente*/
+    margin-bottom: 0;/*Elimina el margen inferior de los mensajes de error */
+    display: none;/*Oculta inicialmente los mensajes de error.*/
+}
+
+.formulario_input-error-activo {/*se utilizan para activar la visualización de mensajes de error*/
+    display: block;/*Hace que los mensajes de error sean visibles */
+}
+
+.formulario_validacion-estado { 
+    position: absolute;/*Posiciona los elementos de estado de validación de forma absoluta en relación con su contenedor*/
+    right: 10px;/*Establece una distancia de 10 píxeles desde el borde derecho*/
+    bottom: 15px;/*Establece una distancia de 15 píxeles desde el borde inferior*/
+    z-index: 100;/*stablece la capa z-index de los elementos de estado de validación */
+    font-size: 16px;/*Establece el tamaño de fuente a 16 píxeles*/
+    opacity: 0;/*Esto permite que se desvanezcan gradualmente en la visibilidad cuando sea necesario*/
+}
+
+.formulario_checkbox {/*estilos para el checkbox, la cajita de aceptar terminos*/
+    margin-right: 10px;/*Establece un margen derecho de 10 píxeles para separar los checkboxes de otros elementos.*/
+}
+
+.formulario_grupo-terminos,
+.formulario_mensaje,
+.formulario_grupo-btn-enviar {/*Aplica estilos a los elementos con estas clases dentro del formulario*/
+    grid-column: span 2;/*se extienden por dos columnas en lugar de una sola*/
+}
+
+.formulario_mensaje {
+    height: 45px;/*Establece la altura del elemento de mensaje a 45 píxeles*/
+    line-height: 45px;/*Ajusta la altura de la línea de texto*/
+    background: #F66060;/*Establece un color de fondo para el elemento de mensaje.*/
+    padding: 0 15px;/*Agrega un relleno horizontal de 15 píxeles alrededor del contenido del elemento.*/
+    border-radius: 3px;/*el borde del elemento de mensaje*/
+    display: none; /*nicialmente oculta el elemento de mensaje.*/
+}
+.formulario_mensaje-activo {
+    display: block;/* Hace que el elemento de mensaje sea visible */
+}
+
+.formulario_mensaje p {/*Selecciona elementos de párrafo dentro del elemento de mensaje.*/
+    margin: 0;/*limina cualquier margen que tenga el párrafo dentro del mensaje*/
+}
+
+.formulario_grupo-btn-enviar {
+    display: flex;/*Establece el contenedor de botones para que utilice un modelo de layout flexbox*/
+    flex-direction: column;/*Organiza los botones en una columna en lugar de en una fila*/
+    align-items: center;/*Centra los botones verticalmente dentro del contenedor.*/
+}
+
+.formulario_btn {
+    height: 45px;/* Define la altura del botón a 45 píxeles */
+    line-height: 45px;/* Ajusta la altura de la línea del texto para centrarlo verticalmente */
+    width: 60%;/* Hace que el botón ocupe el 100% del ancho del contenedor */
+    background: #E0FFFF;/* Establece el color de fondo del botón*/
+    color: black;/* Define el color del texto */
+    font-weight: bold;/* Aplica un peso de fuente en negrita al texto */
+    border: none;/* Elimina cualquier borde del botón */
+    border-radius: 3px;/* Aplica un radio a las esquinas del botón */
+    cursor: pointer;/* Cambia el cursor a un puntero al pasar sobre el botón */
+    transition: ease all;;  /* Añade una transición suave para todas las propiedades, mejorando la animación */
+}
+
+.formulario_btn:hover {
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);/* Añade una sombra al botón cuando se pasa el cursor sobre él */
+}
+
+.formulario_mensaje-exito {/*se utilizan para mostrar mensajes de éxito en el formulario.*/
+    font-size: 14px;/*Establece el tamaño de fuente*/
+    color: #119200;/*Establece el color de texto para los mensajes de éxito*/
+    display: none;/*Oculta inicialmente los mensajes de éxito.*/
+}
+
+.formulario_mensaje-exito-activo {/*Elementos con la clase, para activar la visualización de mensajes de éxito*/
+    display: block; /*Hace que los mensajes de éxito sean visibles cambiando su propiedad de visualización a "block"*/
+}
+
+/* Estilos para validacion */
+
+.formulario_grupo-correcto /*se aplican cuando un campo del formulario ha sido validado correctamente*/
+    .formulario_validacion-estado {/*proporciona un estado de validación visual*/ 
+    color: #1ed12d;/*Establece el color de texto para indicar que el campo está validado correctamente*/
+    opacity: 1;/*Establece la opacidad*/
+}
+
+.formulario_grupo-incorrecto /*cuando un campo del formulario no ha sido validado correctamente.*/
+.formulario_label {/*Selecciona elementos de etiqueta dentro del grupo incorrecto*/
+    color: #bb2929;/* Establece el color de texto para indicar que el campo no está validado correctamente*/
+}
+
+.formulario_grupo-incorrecto 
+.formulario_validacion-estado {
+    color: #bb2929;/*Establece el color de texto para indicar que el campo no está validado correctamente*/
+    opacity: 1;/*establece la opacidad*/
+}
+
+.formulario_grupo-incorrecto /*Selecciona elementos de input dentro de un grupo incorrecto.*/
+.formulario_input {
+    border: 3px solid #bb2929;/*Establece un borde sólido de color rojo alrededor del input para indicar que el campo no está validado correctamente.*/
+}
+
+/* Mediaqueries */
+
+@media screen and (max-width: 800px) {/*Define una regla de medios que se aplicará solo cuando
+ el ancho de la pantalla sea igual o inferior a 800 píxeles*/
+
+    .formulario {/*selecciona el formulario*/
+        grid-template-columns: 1fr;/*Cambia el diseño del formulario para que tenga una sola columna en lugar de dos columnas en dispositivos más pequeños*/
+    }
+
+    .formulario_grupo-terminos,
+    .formulario_mensaje,
+    .formulario_grupo-btn-enviar {/*Selecciona los elementos del formulario relacionados con los términos, el mensaje y el botón de enviar*/ 
+        grid-column: 1;/*Establece que estos elementos ocupen toda la anchura del formulario*/
+    }
+
+    .formulario_btn {/*Selecciona el botón del formulario*/{
+        width: 100%;/*Establece que el botón ocupe toda la anchura*/
+    }
+}

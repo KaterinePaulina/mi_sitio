@@ -1,0 +1,38 @@
+body{
+	background: #D0D3D4 ;
+}
+
+.section{
+	text-align: center;
+}
+
+.section h1{
+	font-size: 50px;
+	font-family: calibri;
+	text-align: center;
+}
+
+.section h3{
+	color: red;
+}
+
+
+.section p{
+	font-size: 20px;
+	font-family: calibri;
+}
+
+.boton{
+	position: center;
+	align-items: center;
+	display: inline-block;
+	padding: 11px 25px;
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
+	border-radius: 10px;
+}
+
+.boton:hover{
+	background-color: steelblue;
+}
